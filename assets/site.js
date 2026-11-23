@@ -17,7 +17,7 @@ function drawChart(el) {
   const key = el.dataset.key, cfg = D.charts && D.charts[key];
   if (!cfg) return;
   const isPct = el.dataset.unit === '%';
-  const W = el.clientWidth, H = el.clientHeight, small = W < 520;
+  const W = el.clientWidth, H = el.clientHeight, small = false;
   const pl = small ? 44 : 58, pr = 16, pt = 14, pb = 32;
   const named = cfg.series.map((s, i) => ({ ...s, label: key === 'bi' ? s.name : LINE_NAMES[i] || s.name, color: key === 'bi' ? (i ? '#D46A26' : '#2B1D14') : COLORS[i] }));
   // Linien ohne Angebot (nur Nullen) ausblenden
