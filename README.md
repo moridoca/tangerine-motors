@@ -1,30 +1,32 @@
 # Tangerine Motors – Website
 
-Statische Unternehmenswebsite im Design der *Shareholders Presentation – Customer Value Challenge*
-(Space Grotesk / DM Sans / JetBrains Mono, #0D0E0C · #0F2219 · Lime #C5F442 · Tangerine #FF7A45).
+Statische Website (Orange/Creme) für Tangerine Motors, das Simulationsunternehmen unseres Teams in der Customer Value Challenge.
+Typografie aus der FY26-Präsentation (Space Grotesk, DM Sans, JetBrains Mono), Logo in Montserrat.
 
-## Seiten
-| Datei | Inhalt |
+## Struktur
+| Bereich | Dateien |
 |---|---|
-| `index.html` | Start: Hero, Modelle, Umsatzmix, IR-Teaser, Neuigkeiten |
-| `modelle.html` | Produktabteilung: Clementine (Low Cost), Grove (Family), Zest (Eco-Friendly), Sanguine GT (Image) mit Produktprofil, Marketing, Vergleichstabelle |
-| `unternehmen.html` | Strategie, Meilensteine, Nachhaltigkeit, Vorstand |
-| `investor-relations.html` | Sechs Ranking-Kriterien, Aktie/EBIT-Verlauf, Segmente, Equity Story, Finanzkalender, Berichte, IR-Kontakt |
-| `presse.html` | Meldungen, Mediathek, Pressekontakt |
-| `kontakt.html` | Kontaktformular (öffnet E-Mail-Programm, speichert nichts) |
-| `impressum.html` | Impressum & Datenschutz (Platzhalter) |
+| Start | `index.html` |
+| Modelle (Produkte) | `modelle.html` – Engineering- und Marketingwerte je Linie, Region und Periode, Marktanteil, Absatz |
+| Unternehmen | `unternehmen.html` |
+| **Investor Relations** | `investoren.html` (Übersicht), `investoren-ergebnisse.html` (FY26 Präsentation, Downloads), `investoren-kennzahlen.html` (Marktanteile in %, Absatz, Marktvolumen, Business Index, Datenhinweise), `investoren-aktionaere.html` (Aktie, HV, Dividende, Finanzkalender), `investoren-governance.html` |
+| Presse, Kontakt, Impressum | `presse.html`, `kontakt.html`, `impressum.html` |
 
-## Inhalte ändern
-Alle Texte, Modelle und Kennzahlen stehen in `_build/data.py`. Danach neu erzeugen:
+## Daten
+- Alle Zahlen stammen aus **„Group Oragange All Data .xlsx“** → `data/simulation.json` (Extraktion: `_build/extract.py`).
+- Keine Fahrzeugpreise auf der Website (Spalte „Price“ wird nicht übernommen).
+- „Market Size“ in der Excel = Marktanteil (in Periode 6 als „Market Share“ beschriftet) → in Prozent dargestellt.
+- FY26 = Periode 8 der Excel.
+- Umsatz, EBIT, ROCE, Aktienkurs, CO₂, Mitarbeitermoral sind nicht in der Excel → auf der IR-Seite als offen markiert.
+- Unstimmigkeiten in der Excel werden beim Build automatisch erkannt und auf der Kennzahlen-Seite unter „Hinweise zur Datenqualität“ gelistet.
+- `data/tangerine-motors-operative-daten.csv` wird beim Build erzeugt (Download auf der IR-Seite).
 
+## Aktualisieren
 ```bash
-python3 _build/build.py
+python3 _build/extract.py "/pfad/zu/Group Oragange All Data .xlsx"   # neue Excel einlesen
+python3 _build/build.py                                               # Seiten neu erzeugen
 ```
-
-## Hinweis
-Fiktives Unternehmen. **Alle Kennzahlen, Preise und Produktwerte sind Beispielwerte** und vor der
-Präsentation durch die finalen Simulationswerte zu ersetzen. Impressum-Angaben sind Platzhalter;
-die E-Mail-Adressen nutzen die reservierte Domain `.example`.
+Texte und Termine: `_build/content.py`. FY26 Präsentation: `assets/ir/FY26-Praesentation.pdf` / `.pptx` ersetzen.
 
 ## Veröffentlichen
-Reines HTML/CSS/JS ohne Build-Abhängigkeiten – läuft auf GitHub Pages (Branch `main`, Ordner `/`).
+Reines HTML/CSS/JS ohne Abhängigkeiten – läuft auf GitHub Pages (Branch `main`, Ordner `/`).

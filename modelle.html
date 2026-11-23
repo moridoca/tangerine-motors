@@ -4,122 +4,137 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Modelle – Tangerine Motors</title>
-<meta name="description" content="Clementine, Grove, Zest und Sanguine GT: die vier Fahrzeuglinien von Tangerine Motors.">
-<meta name="theme-color" content="#0D0E0C">
+<meta name="description" content="Clementine, Grove, Zest und Sanguine GT: Engineering, Marketing und Marktanteile je Region und Periode.">
+<meta name="theme-color" content="#F7F0E4">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=DM+Sans:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=DM+Sans:wght@400;600&family=JetBrains+Mono:wght@400;600&family=Montserrat:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Tangerine Motors – Startseite"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="18" r="12" fill="#FF7A45"/><circle cx="16" cy="18" r="12" fill="none" stroke="#12140F" stroke-opacity=".25" stroke-width="1"/><path d="M16 6 C16 3 18 1.5 21 1.5 C22 4.5 20 7 16 7 Z" fill="#C5F442"/><path d="M16 6.5 V9" stroke="#12140F" stroke-width="1.6" stroke-linecap="round"/><path d="M10 15 a7 7 0 0 1 5 -4" stroke="#fff" stroke-opacity=".55" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><span>Tangerine Motors</span></a>
+    <a class="brand" href="index.html" aria-label="Tangerine Motors – Startseite"><svg class="mark" viewBox="-4 -4 234 101" aria-hidden="true"><path fill="#D46A26" d="M0 17.7 L20.7 0 H139 L124 17.7 Z"/><rect x="60" y="28.7" width="16.7" height="64" fill="#1C1A1A"/><path fill="#1C1A1A" d="M100 92.7 V28.7 H116.7 L159 72.7 L210 0 H225.7 V92.7 H209 V29.3 L163.3 83.3 H154.7 L116.7 49.3 V92.7 Z"/></svg><span class="div" aria-hidden="true"></span><span class="word">TANGERINE MOTORS</span></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menü</button>
-    <nav aria-label="Hauptnavigation"><ul class="nav" id="nav"><li><a href="index.html">Start</a></li><li><a href="modelle.html" aria-current="page">Modelle</a></li><li><a href="unternehmen.html">Unternehmen</a></li><li><a href="investor-relations.html">Investor Relations</a></li><li><a href="presse.html">Presse</a></li><li><a class="cta" href="kontakt.html">Kontakt</a></li></ul></nav>
+    <nav aria-label="Hauptnavigation"><ul class="nav" id="nav"><li><a href="index.html">Start</a></li><li><a href="modelle.html" aria-current="page">Modelle</a></li><li><a href="unternehmen.html">Unternehmen</a></li><li><a href="investoren.html">Investor Relations</a></li><li><a href="presse.html">Presse</a></li><li><a class="cta" href="kontakt.html">Kontakt</a></li></ul></nav>
   </div>
 </header>
+
 <main id="main">
 
-<section class="dark">
+<section class="hero" style="padding-bottom:clamp(40px,5vw,72px)">
   <div class="wrap">
     <p class="eyebrow">Modelle</p>
     <h1>Vier Linien,<br>vier Kunden.</h1>
-    <p class="sub">Jedes Modell ist auf die Kaufkriterien seines Segments ausgelegt – nicht mehr, nicht weniger.</p>
-    <div class="actions tabs"><a href="#clementine">Clementine</a><a href="#grove">Grove</a><a href="#zest">Zest</a><a href="#sanguine">Sanguine GT</a></div>
+    <p class="sub">Jedes Modell ist auf die Kaufkriterien seines Segments ausgelegt. Alle Werte stammen aus unseren Entscheidungen in der Simulation.</p>
+    <div class="actions"><a class="btn ghost" href="#clementine">Clementine</a><a class="btn ghost" href="#grove">Grove</a><a class="btn ghost" href="#zest">Zest</a><a class="btn ghost" href="#sanguine">Sanguine GT</a></div>
   </div>
 </section>
-<section style="padding-top:0"><div class="wrap">
-<article class="model" id="clementine">
+<section class="paper" style="padding-top:0;position:sticky;top:72px;z-index:30;padding-bottom:0;border-bottom:1px solid var(--line)">
+  <div class="wrap controls" style="padding-top:12px;padding-bottom:12px">
+    <div class="seg-toggle" role="group" aria-label="Region"><button type="button" data-reg="Region 1" aria-pressed="true">Region 1</button><button type="button" data-reg="Region 2" aria-pressed="false">Region 2</button></div>
+    <div class="seg-toggle" role="group" aria-label="Periode" id="per-btns"><button type="button" data-per="1" aria-pressed="false">P1</button><button type="button" data-per="2" aria-pressed="false">P2</button><button type="button" data-per="3" aria-pressed="false">P3</button><button type="button" data-per="4" aria-pressed="false">P4</button><button type="button" data-per="5" aria-pressed="false">P5</button><button type="button" data-per="6" aria-pressed="false">P6</button><button type="button" data-per="7" aria-pressed="false">P7</button><button type="button" data-per="8" aria-pressed="true">P8</button></div>
+    <span class="small">Veränderung ggü. erster Periode der Region</span>
+  </div>
+</section>
+<section style="padding-top:0"><div class="wrap" id="models">
+<article class="model" id="clementine" data-line="0">
   <div>
     <p class="eyebrow">Low Cost · Kostenführer</p>
-    <h2 style="margin-bottom:14px">Clementine</h2>
+    <h2 style="margin-bottom:10px">Clementine</h2>
     <p class="sub" style="margin-top:0">Robust, geräumig, ehrlich kalkuliert.</p>
-    <p class="lead" style="margin-top:20px">Der Clementine ist auf das reduziert, wofür seine Käufer bezahlen: Robustheit und Platz. Wenig Elektronik, viele Gleichteile, ein dichtes Händlernetz – so bleibt er Kostenführer.</p>
-    <div class="stage mt"><img src="assets/cars/lowcost.svg" alt="Clementine, Seitenansicht" width="260" height="91" loading="lazy"></div>
+    <p class="lead" style="margin-top:16px">Der Clementine ist auf das reduziert, wofür seine Käufer zahlen: Robustheit und Platz. Wenig Elektronik, viele Gleichteile, Lieferfähigkeit vor Ausstattung.</p>
+    <div class="stage mt"><img class="x" src="assets/cars/lowcost.svg" alt="Clementine, Seitenansicht" loading="lazy" width="260" height="91"></div>
+    <p class="small" style="margin-top:14px"><strong style="color:var(--ink)">Zielkunde:</strong> Preis und Lieferfähigkeit entscheiden, Marketing und Technik kaum. Gekauft wird aus praktischen Gründen.</p>
   </div>
   <div>
-    <p class="label">Produktprofil · Skala 1–10 <span class="flag">Beispielwerte</span></p>
-    <div class="profile"><div class="meter"><div class="top"><span class="small">Design</span><span class="num">3</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div><div class="meter"><div class="top"><span class="small">Performance</span><span class="num">3</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div><div class="meter"><div class="top"><span class="small">Komfort</span><span class="num">4</span></div><div class="track"><div class="fill" style="width:40%"></div></div></div><div class="meter"><div class="top"><span class="small">Robustheit</span><span class="num">8</span></div><div class="track"><div class="fill" style="width:80%"></div></div></div><div class="meter"><div class="top"><span class="small">Größe</span><span class="num">7</span></div><div class="track"><div class="fill" style="width:70%"></div></div></div><div class="meter"><div class="top"><span class="small">Technologie</span><span class="num">3</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div><div class="meter"><div class="top"><span class="small">Verbrauch</span><span class="num">6</span></div><div class="track"><div class="fill" style="width:60%"></div></div></div><div class="meter"><div class="top"><span class="small">Modellvielfalt</span><span class="num">3</span></div><div class="track"><div class="fill" style="width:30%"></div></div></div><div class="meter"><div class="top"><span class="small">Neuheit</span><span class="num">2</span></div><div class="track"><div class="fill" style="width:20%"></div></div></div></div>
-    <div class="hl mt"><p class="label" style="color:var(--lime);margin-bottom:6px">Marketing</p><div class="pair"><span class="lead" style="font-size:17px">Händlernähe</span><span class="val">8</span></div><div class="pair"><span class="lead" style="font-size:17px">Kauferlebnis</span><span class="val">4</span></div><div class="pair"><span class="lead" style="font-size:17px">After-Sales</span><span class="val">6</span></div><div class="pair"><span class="lead" style="font-size:17px">Markenstärke</span><span class="val">3</span></div></div>
-    <p class="small" style="margin-top:18px"><strong style="color:var(--ink)">Zielkunde:</strong> Preis und Lieferfähigkeit entscheiden, Marketing und Technik kaum. Gekauft wird aus praktischen Gründen.</p>
-    <div class="actions" style="margin-top:24px"><span class="val">ab 16.900 €</span><a class="btn ghost" href="kontakt.html?thema=Vertrieb&amp;modell=Clementine">Probefahrt anfragen</a></div>
+    <div class="share"><div><p class="label">Marktanteil <span data-f="reg"></span> · <span data-f="per"></span></p><p class="big" data-f="share">–</p></div>
+      <div><p class="label">Absatz</p><p class="val" data-f="sales">–</p></div></div>
+    <div class="blockhead"><p class="label">Engineering · Skala 0–10</p><p class="label" data-f="cmp"></p></div>
+    <div class="profile" data-f="eng"></div>
+    <div class="blockhead"><p class="label">Marketing · Skala 0–10</p></div>
+    <div class="profile" data-f="mkt"></div>
+    <p class="small" data-f="na" hidden style="margin-top:14px"></p>
   </div>
 </article>
-<article class="model" id="grove">
+<article class="model" id="grove" data-line="1">
   <div>
     <p class="eyebrow">Family · Cash Cow</p>
-    <h2 style="margin-bottom:14px">Grove</h2>
+    <h2 style="margin-bottom:10px">Grove</h2>
     <p class="sub" style="margin-top:0">Platz für alle. Verlässlich jeden Tag.</p>
-    <p class="lead" style="margin-top:20px">Der Grove ist das Familienauto mit dem größten Ergebnisbeitrag im Haus. Stabile Ausstattung, stabiler Preis und ein Händler in der Nähe – für Kauf und Service.</p>
-    <div class="stage mt"><img src="assets/cars/family.svg" alt="Grove, Seitenansicht" width="260" height="91" loading="lazy"></div>
+    <p class="lead" style="margin-top:16px">Der Grove ist das Familienauto im Portfolio: stabile Ausstattung, Händler in der Nähe für Kauf und Service. Er finanziert den Ausbau der Wachstumslinien.</p>
+    <div class="stage mt"><img class="x" src="assets/cars/family.svg" alt="Grove, Seitenansicht" loading="lazy" width="260" height="91"></div>
+    <p class="small" style="margin-top:14px"><strong style="color:var(--ink)">Zielkunde:</strong> Mittlere Sensibilität für alle Kriterien. Der Family-Markt in Region 1 schrumpft, in Region 2 wächst er.</p>
   </div>
   <div>
-    <p class="label">Produktprofil · Skala 1–10 <span class="flag">Beispielwerte</span></p>
-    <div class="profile"><div class="meter"><div class="top"><span class="small">Design</span><span class="num">6</span></div><div class="track"><div class="fill" style="width:60%"></div></div></div><div class="meter"><div class="top"><span class="small">Performance</span><span class="num">5</span></div><div class="track"><div class="fill" style="width:50%"></div></div></div><div class="meter"><div class="top"><span class="small">Komfort</span><span class="num">7</span></div><div class="track"><div class="fill" style="width:70%"></div></div></div><div class="meter"><div class="top"><span class="small">Robustheit</span><span class="num">8</span></div><div class="track"><div class="fill" style="width:80%"></div></div></div><div class="meter"><div class="top"><span class="small">Größe</span><span class="num">9</span></div><div class="track"><div class="fill" style="width:90%"></div></div></div><div class="meter"><div class="top"><span class="small">Technologie</span><span class="num">6</span></div><div class="track"><div class="fill" style="width:60%"></div></div></div><div class="meter"><div class="top"><span class="small">Verbrauch</span><span class="num">6</span></div><div class="track"><div class="fill" style="width:60%"></div></div></div><div class="meter"><div class="top"><span class="small">Modellvielfalt</span><span class="num">5</span></div><div class="track"><div class="fill" style="width:50%"></div></div></div><div class="meter"><div class="top"><span class="small">Neuheit</span><span class="num">5</span></div><div class="track"><div class="fill" style="width:50%"></div></div></div></div>
-    <div class="hl mt"><p class="label" style="color:var(--lime);margin-bottom:6px">Marketing</p><div class="pair"><span class="lead" style="font-size:17px">Händlernähe</span><span class="val">8</span></div><div class="pair"><span class="lead" style="font-size:17px">Kauferlebnis</span><span class="val">6</span></div><div class="pair"><span class="lead" style="font-size:17px">After-Sales</span><span class="val">7</span></div><div class="pair"><span class="lead" style="font-size:17px">Markenstärke</span><span class="val">5</span></div></div>
-    <p class="small" style="margin-top:18px"><strong style="color:var(--ink)">Zielkunde:</strong> Mittlere Sensibilität für alle Kriterien. Markt in Region 1 schrumpft um rund 5 % pro Periode.</p>
-    <div class="actions" style="margin-top:24px"><span class="val">ab 27.400 €</span><a class="btn ghost" href="kontakt.html?thema=Vertrieb&amp;modell=Grove">Probefahrt anfragen</a></div>
+    <div class="share"><div><p class="label">Marktanteil <span data-f="reg"></span> · <span data-f="per"></span></p><p class="big" data-f="share">–</p></div>
+      <div><p class="label">Absatz</p><p class="val" data-f="sales">–</p></div></div>
+    <div class="blockhead"><p class="label">Engineering · Skala 0–10</p><p class="label" data-f="cmp"></p></div>
+    <div class="profile" data-f="eng"></div>
+    <div class="blockhead"><p class="label">Marketing · Skala 0–10</p></div>
+    <div class="profile" data-f="mkt"></div>
+    <p class="small" data-f="na" hidden style="margin-top:14px"></p>
   </div>
 </article>
-<article class="model" id="zest">
+<article class="model" id="zest" data-line="2">
   <div>
     <p class="eyebrow">Eco-Friendly · Wachstumslinie</p>
-    <h2 style="margin-bottom:14px">Zest</h2>
+    <h2 style="margin-bottom:10px">Zest</h2>
     <p class="sub" style="margin-top:0">Gebaut um den Verbrauch herum.</p>
-    <p class="lead" style="margin-top:20px">Der Zest ist konsequent auf niedrigen Verbrauch und geringe CO₂-Emissionen ausgelegt. Weniger Leistung, mehr Technik – und mit wachsendem Volumen sinken die Stückkosten.</p>
-    <div class="stage mt"><img src="assets/cars/eco.svg" alt="Zest, Seitenansicht" width="260" height="91" loading="lazy"></div>
+    <p class="lead" style="margin-top:16px">Der Zest ist konsequent auf niedrigen Verbrauch und geringe Emissionen ausgelegt – weniger Leistung, mehr Technik. Mit wachsendem Volumen sinken die Stückkosten.</p>
+    <div class="stage mt"><img class="x" src="assets/cars/eco.svg" alt="Zest, Seitenansicht" loading="lazy" width="260" height="91"></div>
+    <p class="small" style="margin-top:14px"><strong style="color:var(--ink)">Zielkunde:</strong> Technik zählt am meisten. Am schnellsten wachsender Markt in Region 1; in Region 2 bisher nicht angeboten.</p>
   </div>
   <div>
-    <p class="label">Produktprofil · Skala 1–10 <span class="flag">Beispielwerte</span></p>
-    <div class="profile"><div class="meter"><div class="top"><span class="small">Design</span><span class="num">5</span></div><div class="track"><div class="fill" style="width:50%"></div></div></div><div class="meter"><div class="top"><span class="small">Performance</span><span class="num">4</span></div><div class="track"><div class="fill" style="width:40%"></div></div></div><div class="meter"><div class="top"><span class="small">Komfort</span><span class="num">5</span></div><div class="track"><div class="fill" style="width:50%"></div></div></div><div class="meter"><div class="top"><span class="small">Robustheit</span><span class="num">5</span></div><div class="track"><div class="fill" style="width:50%"></div></div></div><div class="meter"><div class="top"><span class="small">Größe</span><span class="num">4</span></div><div class="track"><div class="fill" style="width:40%"></div></div></div><div class="meter"><div class="top"><span class="small">Technologie</span><span class="num">8</span></div><div class="track"><div class="fill" style="width:80%"></div></div></div><div class="meter"><div class="top"><span class="small">Verbrauch</span><span class="num">10</span></div><div class="track"><div class="fill" style="width:100%"></div></div></div><div class="meter"><div class="top"><span class="small">Modellvielfalt</span><span class="num">4</span></div><div class="track"><div class="fill" style="width:40%"></div></div></div><div class="meter"><div class="top"><span class="small">Neuheit</span><span class="num">7</span></div><div class="track"><div class="fill" style="width:70%"></div></div></div></div>
-    <div class="hl mt"><p class="label" style="color:var(--lime);margin-bottom:6px">Marketing</p><div class="pair"><span class="lead" style="font-size:17px">Händlernähe</span><span class="val">6</span></div><div class="pair"><span class="lead" style="font-size:17px">Kauferlebnis</span><span class="val">6</span></div><div class="pair"><span class="lead" style="font-size:17px">After-Sales</span><span class="val">6</span></div><div class="pair"><span class="lead" style="font-size:17px">Markenstärke</span><span class="val">7</span></div></div>
-    <p class="small" style="margin-top:18px"><strong style="color:var(--ink)">Zielkunde:</strong> Technik zählt am meisten, der Preis wenig. Am schnellsten wachsender Markt in Region 1 (+15 % pro Periode).</p>
-    <div class="actions" style="margin-top:24px"><span class="val">ab 31.900 €</span><a class="btn ghost" href="kontakt.html?thema=Vertrieb&amp;modell=Zest">Probefahrt anfragen</a></div>
+    <div class="share"><div><p class="label">Marktanteil <span data-f="reg"></span> · <span data-f="per"></span></p><p class="big" data-f="share">–</p></div>
+      <div><p class="label">Absatz</p><p class="val" data-f="sales">–</p></div></div>
+    <div class="blockhead"><p class="label">Engineering · Skala 0–10</p><p class="label" data-f="cmp"></p></div>
+    <div class="profile" data-f="eng"></div>
+    <div class="blockhead"><p class="label">Marketing · Skala 0–10</p></div>
+    <div class="profile" data-f="mkt"></div>
+    <p class="small" data-f="na" hidden style="margin-top:14px"></p>
   </div>
 </article>
-<article class="model" id="sanguine">
+<article class="model" id="sanguine" data-line="3">
   <div>
-    <p class="eyebrow">Image · Preis- und Markenführer</p>
-    <h2 style="margin-bottom:14px">Sanguine GT</h2>
-    <p class="sub" style="margin-top:0">Neuheit, Technik und Marke – mit Preis.</p>
-    <p class="lead" style="margin-top:20px">Der Sanguine GT gibt dem Image-Kunden, was er sucht: Neuheit, Technologie und Markenstärke. Exklusiver Vertrieb und Premium-Service rechtfertigen den Preis.</p>
-    <div class="stage mt"><img src="assets/cars/sport.svg" alt="Sanguine GT, Seitenansicht" width="260" height="91" loading="lazy"></div>
+    <p class="eyebrow">Image · Markenführer</p>
+    <h2 style="margin-bottom:10px">Sanguine GT</h2>
+    <p class="sub" style="margin-top:0">Neuheit, Technik und Marke.</p>
+    <p class="lead" style="margin-top:16px">Der Sanguine GT gibt dem Image-Kunden, was er sucht: Performance, Technologie und Markenstärke – mit exklusivem Vertrieb und Premium-Service.</p>
+    <div class="stage mt"><img class="x" src="assets/cars/sport.svg" alt="Sanguine GT, Seitenansicht" loading="lazy" width="260" height="91"></div>
+    <p class="small" style="margin-top:14px"><strong style="color:var(--ink)">Zielkunde:</strong> Technik und Marketing sind entscheidend. Teuerste Kapazität bei kaum Skaleneffekten.</p>
   </div>
   <div>
-    <p class="label">Produktprofil · Skala 1–10 <span class="flag">Beispielwerte</span></p>
-    <div class="profile"><div class="meter"><div class="top"><span class="small">Design</span><span class="num">9</span></div><div class="track"><div class="fill" style="width:90%"></div></div></div><div class="meter"><div class="top"><span class="small">Performance</span><span class="num">9</span></div><div class="track"><div class="fill" style="width:90%"></div></div></div><div class="meter"><div class="top"><span class="small">Komfort</span><span class="num">8</span></div><div class="track"><div class="fill" style="width:80%"></div></div></div><div class="meter"><div class="top"><span class="small">Robustheit</span><span class="num">7</span></div><div class="track"><div class="fill" style="width:70%"></div></div></div><div class="meter"><div class="top"><span class="small">Größe</span><span class="num">5</span></div><div class="track"><div class="fill" style="width:50%"></div></div></div><div class="meter"><div class="top"><span class="small">Technologie</span><span class="num">9</span></div><div class="track"><div class="fill" style="width:90%"></div></div></div><div class="meter"><div class="top"><span class="small">Verbrauch</span><span class="num">4</span></div><div class="track"><div class="fill" style="width:40%"></div></div></div><div class="meter"><div class="top"><span class="small">Modellvielfalt</span><span class="num">7</span></div><div class="track"><div class="fill" style="width:70%"></div></div></div><div class="meter"><div class="top"><span class="small">Neuheit</span><span class="num">9</span></div><div class="track"><div class="fill" style="width:90%"></div></div></div></div>
-    <div class="hl mt"><p class="label" style="color:var(--lime);margin-bottom:6px">Marketing</p><div class="pair"><span class="lead" style="font-size:17px">Händlernähe</span><span class="val">4</span></div><div class="pair"><span class="lead" style="font-size:17px">Kauferlebnis</span><span class="val">9</span></div><div class="pair"><span class="lead" style="font-size:17px">After-Sales</span><span class="val">9</span></div><div class="pair"><span class="lead" style="font-size:17px">Markenstärke</span><span class="val">9</span></div></div>
-    <p class="small" style="margin-top:18px"><strong style="color:var(--ink)">Zielkunde:</strong> Technik und Marketing sind entscheidend, der Preis kaum. Teuerste Kapazität bei kaum Skaleneffekten.</p>
-    <div class="actions" style="margin-top:24px"><span class="val">ab 68.500 €</span><a class="btn ghost" href="kontakt.html?thema=Vertrieb&amp;modell=Sanguine GT">Probefahrt anfragen</a></div>
+    <div class="share"><div><p class="label">Marktanteil <span data-f="reg"></span> · <span data-f="per"></span></p><p class="big" data-f="share">–</p></div>
+      <div><p class="label">Absatz</p><p class="val" data-f="sales">–</p></div></div>
+    <div class="blockhead"><p class="label">Engineering · Skala 0–10</p><p class="label" data-f="cmp"></p></div>
+    <div class="profile" data-f="eng"></div>
+    <div class="blockhead"><p class="label">Marketing · Skala 0–10</p></div>
+    <div class="profile" data-f="mkt"></div>
+    <p class="small" data-f="na" hidden style="margin-top:14px"></p>
   </div>
 </article></div></section>
-<section class="dark">
+<section class="paper">
   <div class="wrap">
-    <p class="eyebrow">Vergleich</p>
-    <h2>Alle Linien im Produktprofil</h2>
-    <div class="table-wrap"><table>
-      <thead><tr><th>Kriterium</th><th>Clementine</th><th>Grove</th><th>Zest</th><th>Sanguine GT</th></tr></thead>
-      <tbody><tr><td>Design</td><td class="num">3</td><td class="num">6</td><td class="num">5</td><td class="num">9</td></tr><tr><td>Performance</td><td class="num">3</td><td class="num">5</td><td class="num">4</td><td class="num">9</td></tr><tr><td>Komfort</td><td class="num">4</td><td class="num">7</td><td class="num">5</td><td class="num">8</td></tr><tr><td>Robustheit</td><td class="num">8</td><td class="num">8</td><td class="num">5</td><td class="num">7</td></tr><tr><td>Größe</td><td class="num">7</td><td class="num">9</td><td class="num">4</td><td class="num">5</td></tr><tr><td>Technologie</td><td class="num">3</td><td class="num">6</td><td class="num">8</td><td class="num">9</td></tr><tr><td>Verbrauch</td><td class="num">6</td><td class="num">6</td><td class="num">10</td><td class="num">4</td></tr><tr><td>Modellvielfalt</td><td class="num">3</td><td class="num">5</td><td class="num">4</td><td class="num">7</td></tr><tr><td>Neuheit</td><td class="num">2</td><td class="num">5</td><td class="num">7</td><td class="num">9</td></tr><tr class="total"><td>Preis</td><td>ab 16.900 €</td><td>ab 27.400 €</td><td>ab 31.900 €</td><td>ab 68.500 €</td></tr></tbody>
-    </table></div>
-    <p class="small" style="margin-top:16px">Skala 1–10 aus den Engineering-Entscheidungen der Simulation. <span class="flag">Beispielwerte</span></p>
+    <p class="eyebrow">Vergleich FY26</p>
+    <h2>Alle Linien im Profil, Region 1, Periode 8</h2>
+    <div class="table-wrap"><table><thead><tr><th>Kriterium</th><th>Clementine</th><th>Grove</th><th>Zest</th><th>Sanguine GT</th></tr></thead><tbody><tr><td>Design</td><td class="num">4</td><td class="num">5</td><td class="num">4</td><td class="num hi">7</td></tr><tr><td>Performance</td><td class="num">4</td><td class="num">5</td><td class="num">4</td><td class="num hi">10</td></tr><tr><td>Komfort</td><td class="num">4</td><td class="num">5</td><td class="num">4</td><td class="num hi">6</td></tr><tr><td>Robustheit</td><td class="num">5</td><td class="num">5</td><td class="num">4</td><td class="num hi">6</td></tr><tr><td>Größe</td><td class="num">4</td><td class="num">5</td><td class="num">4</td><td class="num hi">6</td></tr><tr><td>Technologie</td><td class="num">4</td><td class="num">5</td><td class="num">5</td><td class="num hi">10</td></tr><tr><td>Verbrauch / Emissionen</td><td class="num hi">10</td><td class="num hi">10</td><td class="num hi">10</td><td class="num hi">10</td></tr><tr><td>Modellvielfalt</td><td class="num">4</td><td class="num hi">5</td><td class="num hi">5</td><td class="num hi">5</td></tr><tr><td>Neuheit</td><td class="num">2</td><td class="num">6</td><td class="num">5</td><td class="num hi">7</td></tr><tr><td>Händlernähe</td><td class="num">2</td><td class="num hi">6</td><td class="num">5</td><td class="num hi">6</td></tr><tr><td>Kauferlebnis</td><td class="num">2</td><td class="num">5</td><td class="num">4</td><td class="num hi">8</td></tr><tr><td>After-Sales</td><td class="num">1</td><td class="num">3</td><td class="num">3</td><td class="num hi">6</td></tr><tr><td>Markenstärke</td><td class="num">2</td><td class="num">2</td><td class="num">4</td><td class="num hi">5</td></tr><tr class="total"><td>Marktanteil</td><td>19 %</td><td>18 %</td><td>28 %</td><td>19 %</td></tr></tbody></table></div>
+    <p class="src">Höchster Wert je Kriterium hervorgehoben · Quelle: Group Oragange All Data .xlsx</p>
   </div>
 </section>
 </main>
 <footer class="site-foot">
   <div class="wrap">
     <div class="cols">
-      <div class="stack">
-        <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="18" r="12" fill="#FF7A45"/><circle cx="16" cy="18" r="12" fill="none" stroke="#12140F" stroke-opacity=".25" stroke-width="1"/><path d="M16 6 C16 3 18 1.5 21 1.5 C22 4.5 20 7 16 7 Z" fill="#C5F442"/><path d="M16 6.5 V9" stroke="#12140F" stroke-width="1.6" stroke-linecap="round"/><path d="M10 15 a7 7 0 0 1 5 -4" stroke="#fff" stroke-opacity=".55" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><span>Tangerine Motors</span></a>
-        <p class="small">Vier Fahrzeuglinien. Eine Kapitalstrategie. Low Cost, Family, Eco-Friendly und Image – in zwei Regionen.</p>
-      </div>
+      <div class="stack"><a class="brand" href="index.html" aria-label="Tangerine Motors – Startseite"><svg class="mark" viewBox="-4 -4 234 101" aria-hidden="true"><path fill="#D46A26" d="M0 17.7 L20.7 0 H139 L124 17.7 Z"/><rect x="60" y="28.7" width="16.7" height="64" fill="#1C1A1A"/><path fill="#1C1A1A" d="M100 92.7 V28.7 H116.7 L159 72.7 L210 0 H225.7 V92.7 H209 V29.3 L163.3 83.3 H154.7 L116.7 49.3 V92.7 Z"/></svg><span class="div" aria-hidden="true"></span><span class="word">TANGERINE MOTORS</span></a><p class="small" style="color:#C9B49C">Vier Fahrzeuglinien in zwei Regionen: Low Cost, Family, Eco-Friendly und Image.</p></div>
       <div><p class="label">Modelle</p><ul><li><a href="modelle.html#clementine">Clementine</a></li><li><a href="modelle.html#grove">Grove</a></li><li><a href="modelle.html#zest">Zest</a></li><li><a href="modelle.html#sanguine">Sanguine GT</a></li></ul></div>
-      <div><p class="label">Investoren</p><ul><li><a href="investor-relations.html#kennzahlen">Kennzahlen</a></li><li><a href="investor-relations.html#segmente">Segmente</a></li><li><a href="investor-relations.html#kalender">Finanzkalender</a></li><li><a href="investor-relations.html#berichte">Berichte</a></li></ul></div>
-      <div><p class="label">Unternehmen</p><ul><li><a href="unternehmen.html">Strategie</a></li><li><a href="unternehmen.html#vorstand">Vorstand</a></li><li><a href="presse.html">Presse</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><p class="label">Investor Relations</p><ul><li><a href="investoren.html">Übersicht</a></li><li><a href="investoren-ergebnisse.html">Ergebnisse & Präsentationen</a></li><li><a href="investoren-kennzahlen.html">Kennzahlen</a></li><li><a href="investoren-aktionaere.html">Aktie & Aktionäre</a></li><li><a href="investoren-governance.html">Governance</a></li></ul></div>
+      <div><p class="label">Unternehmen</p><ul><li><a href="unternehmen.html">Strategie</a></li><li><a href="investoren-governance.html">Vorstand</a></li><li><a href="presse.html">Presse</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
     </div>
-    <div class="legal"><span>© 2026 Tangerine Motors · <a href="impressum.html">Impressum</a> · <a href="impressum.html#datenschutz">Datenschutz</a></span><span>Fiktives Unternehmen (Customer Value Challenge). Alle Kennzahlen sind Beispielwerte.</span></div>
+    <div class="legal"><span>© 2026 Tangerine Motors · <a href="impressum.html">Impressum</a> · <a href="impressum.html#datenschutz">Datenschutz</a></span><span>Simulationsunternehmen der Customer Value Challenge · Daten: Group Oragange All Data .xlsx</span></div>
   </div>
 </footer>
+<script src="assets/data.js"></script>
 <script src="assets/site.js"></script>
 </body>
 </html>
